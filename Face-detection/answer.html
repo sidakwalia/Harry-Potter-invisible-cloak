@@ -1,0 +1,122 @@
+<!DOCTYPE html><html>
+        <div class="main">
+            </h2><button class="accordion active"><b>Question:</b></button>
+            
+                <html>
+                    <head></head>
+                    <body>
+                    <div class="ugc-base question-body-text">
+			<div class><p>A lifeguard is sitting on a beach and wants to save a distressed
+swimmer in the ocean. The lifeguard can run on the beach at a speed
+Vr and swim at a speed Vs. What is the optimal path for the
+lifeguard to take in order to reach the swimmer at the shortest
+amount of time?</p>
+</div>
+			
+			
+		</div>
+                    </body>
+                    </html>
+                            </h2><button class="accordion active"><b>Answer</b></button>
+                            <html>
+                    <head></head> 
+                    <body> 
+                    
+                    <p>Beach distance R</p>
+<p>Swim distance S</p>
+<p>offset X</p>
+<p>he runs sqrt(R^2+x^2)</p>
+<p>he swims sqrt(S^2+(X-x)^2)</p>
+<p>total time = sqrt(R^2+x^2) / Vr + sqrt(S^2+(X-x)^2)/Vs</p>
+<p>dt/dx = x*sqrt(R^2+x^2)-1 / Vr -(X-x)*sqrt(S^2+(X-x)^2)-1/Vs</p>
+<p>x*(sqrt(R^2+x^2)-1 / Vr +sqrt(S^2+(X-x)^2)-1/Vs) =
+X*sqrt(S^2+(X-x)^2)-1/Vs</p>
+<p>x = X*sqrt(S^2+(X-x)^2)-1/Vs / (sqrt(R^2+x^2)-1 / Vr
++sqrt(S^2+(X-x)^2)-1/Vs)</p>
+
+                    
+                
+                    </body>
+                    </html>
+                    <script>
+                        var acc = document.getElementsByClassName("accordion");
+                        var i;
+                        for (i = 0; i < acc.length; i++) {
+                            acc[i].addEventListener("click", function () {
+    
+                                this.nextElementSibling.classList.toggle('collapse')
+                                this.nextElementSibling.classList.toggle('expand')
+    
+                            });
+                        }
+                    </script></body><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    
+                        .accordion {
+                            background-color: #fc2403;
+                            color: #00000;
+                            cursor: pointer;
+                            padding: 15px;
+                            width: 100%;
+                            border: solid black 1px;
+                            text-align: left;
+                            font-size: 15px;
+                            height:auto;
+                            overflow:hidden;
+                            filter: brightness(100%);
+                            transition:filter 0.15s;
+    
+                        }
+    
+                        .accordion:hover {
+                            filter: brightness(125%);
+                            border: solid black;
+                        }
+    
+                        .panel {
+                            background-color: white;
+                            height:auto;
+                            opacity: 1;
+                            padding: 0 18px;
+                            max-height:500em;
+                            border-style: groove;
+                            transition: max-height 0.5s ease;
+                            overflow:hidden;
+                        }
+    
+                        .panel.colapse {
+                            max-height:0em;
+                            border-style: none;
+                        }
+    
+                        .panel.expand{
+                            max-height:500em;
+                            border-style: groove;
+                        }
+    
+                        .answer {
+                            height:auto;
+                            max-height:500em;
+                            transition: max-height 0.5s ease;
+                        }
+    
+                        .answer.colapse {
+                            max-height:0em;
+    
+                        }
+    
+                        .answer.expand{
+                            max-height:500em;
+    
+                        }
+    
+                        .question {
+                            padding: 0 18px;
+                            border: groove;
+                            overflow:hidden;
+                        }
+                        .main {
+                            background-color: white;
+                        }
+    
+    
+                    </style></head>
